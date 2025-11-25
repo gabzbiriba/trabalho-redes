@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ProjetoEng</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="card-login">
+        <h1>Login</h1>
+
+        <% if (error) { %>
+            <p style="color:red; text-align:center; margin-bottom: 12px;">
+                <%= error %>
+            </p>
+        <% } %>
+
+        <form method="POST" action="/login">
+
+            <label for="login">Login</label>
+            <input id="login" name="login" required />
+
+            <label for="senha">Senha</label>
+            <input id="senha" name="senha" type="password" required />
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
